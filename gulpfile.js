@@ -2,7 +2,7 @@ import { env, cwd } from 'node:process'
 import { join, dirname } from 'node:path'
 import { readFileSync } from 'node:fs'
 import { parseArgs } from 'node:util'
-import { src, series, parallel, dest, watch } from 'gulp'
+import { src, series, parallel, dest, watch, lastRun } from 'gulp'
 import { deleteAsync } from 'del'
 import gulpif from 'gulp-if'
 import filesize from 'gulp-filesize'
@@ -18,7 +18,6 @@ import reporter from 'postcss-reporter'
 import debug from 'postcss-devtools'
 import postcssScss from 'postcss-scss'
 import autoprefixer from 'autoprefixer'
-import sourcemaps from 'gulp-sourcemaps'
 import gulpSvgSprite from 'gulp-svg-sprite'
 import nunjucks from 'gulp-nunjucks-render'
 import htmlLint from 'gulp-html-lint'
@@ -158,8 +157,7 @@ function htmllintReporter(results) {
 }
 
 export const styles = () =>
-  src(paths.dev.styles)
-    .pipe(gulpif(!args.min, sourcemaps.init()))
+  src(paths.dev.styles, { sourcemaps: true, since: lastRun(styles) })
     .pipe(sass({
       outputStyle: 'expanded',
       indentWidth: 4
@@ -176,13 +174,12 @@ export const styles = () =>
         clearMessages: true
       })
     ], { syntax: postcssScss }))
-    .pipe(gulpif(!args.min, sourcemaps.write()))
-    .pipe(dest(paths.dist.styles))
+    .pipe(dest(paths.dist.styles, { sourcemaps: true }))
     .pipe(gulpif(args.debug, filesize()))
     .pipe(bs.stream())
 
 export const images = () =>
-  src(paths.dev.images, {encoding: false})
+  src(paths.dev.images, { since: lastRun(images), encoding: false })
     .pipe(sharpResponsive({
       formats: [
         { format: 'webp', rename: { suffix: "-2x" } },
@@ -210,7 +207,7 @@ export const sprite = () =>
     .pipe(bs.stream())
 
 export const markup = () =>
-  src(paths.dev.pages)
+  src(paths.dev.pages, { since: lastRun(markup) })
     .pipe(data(getDataForFile))
     .pipe(nunjucks({
       path: paths.viewsDir
@@ -245,18 +242,19 @@ export const liveReload = () =>
 
 export const build = series(clean, parallel(styles, images, sprite, markup))
 
-const watchFiles = () => {
-  watch(paths.dev.scss, series(styles))
-  watch(paths.dev.images, series(images))
-  watch(paths.dev.svg, series(sprite))
-  watch(paths.dev.views, series(markup))
+const watchFiles = (cb) => {
+  watch(paths.dev.scss, { delay: 1000 }, styles)
+  watch(paths.dev.images, { delay: 1000 }, images)
+  watch(paths.dev.svg, { delay: 1000 }, sprite)
+  watch(paths.dev.views, { delay: 1000 }, markup)
+  cb()
 }
 export { watchFiles as watch }
 
 export const serve = series(
   build,
+  watchFiles,
   liveReload,
-  watchFiles
 )
 
 export default build
