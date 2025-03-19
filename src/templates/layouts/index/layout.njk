@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <!-- Meta tags and stylesheets -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Homepage</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bakbak+One&family=Poppins:wght@500&display=swap"
+      rel="stylesheet">
+  </head>
+
+  <body>
+      {% include '../../blocks/header.njk' %}
+	    {% block content %}{% endblock %}
+      {% include '../../blocks/footer.njk' %}
+    <!-- Header Section -->
+    {#
+
+    <main>
+
+      
+
+      <!-- Blog Section -->
+      <section class="blog">
+        <h2 class="blog__title">Our blog</h2>
+        <div class="blog__container">
+          <ul class="blog__list">
+            <li class="blog__item">
+              <img src="#" alt="Blog Post 1" class="blog__image" />
+              <span class="blog__tag">NFT</span>
+              <div class="blog__meta">
+                <p class="blog__author">Tony Nguyen</p>
+                <time datetime="2022-06-20" class="blog__date">20 Jun 2022</time>
+              </div>
+              <h3 class="blog__post-title">Sonic live</h3>
+              <p class="blog__excerpt">
+                One September 22, 2021 A volutpat nulla eros, nulla ultrices nec
+                nulla imperdiet...
+              </p>
+              <a href="#" target="_blank" class="blog__link">READMORE</a>
+            </li>
+            <li class="blog__item">
+              <img src="#" alt="Blog Post 2" class="blog__image" />
+              <span class="blog__tag">NFT</span>
+              <div class="blog__meta">
+                <p class="blog__author">Tony Nguyen</p>
+                <time datetime="2022-06-20" class="blog__date">20 Jun 2022</time>
+              </div>
+              <h3 class="blog__post-title">Sonic live</h3>
+              <p class="blog__excerpt">
+                One September 22, 2021 A volutpat nulla eros, nulla ultrices nec
+                nulla imperdiet...
+              </p>
+              <a href="#" target="_blank" class="blog__link">READMORE</a>
+            </li>
+            <li class="blog__item">
+              <img src="#" alt="Blog Post 3" class="blog__image" />
+              <span class="blog__tag">NFT</span>
+              <div class="blog__meta">
+                <p class="blog__author">Tony Nguyen</p>
+                <time datetime="2022-06-20" class="blog__date">20 Jun 2022</time>
+              </div>
+              <h3 class="blog__post-title">Sonic live</h3>
+              <p class="blog__excerpt">
+                One September 22, 2021 A volutpat nulla eros, nulla ultrices nec
+                nulla imperdiet...
+              </p>
+              <a href="#" target="_blank" class="blog__link">READMORE</a>
+            </li>
+            <li class="blog__item">
+              <img src="#" alt="Blog Post 4" class="blog__image" />
+              <span class="blog__tag">NFT</span>
+              <div class="blog__meta">
+                <p class="blog__author">Tony Nguyen</p>
+                <time datetime="2022-06-20" class="blog__date">20 Jun 2022</time>
+              </div>
+              <h3 class="blog__post-title">Sonic live</h3>
+              <p class="blog__excerpt">
+                One September 22, 2021 A volutpat nulla eros, nulla ultrices nec
+                nulla imperdiet...
+              </p>
+              <a href="#" target="_blank" class="blog__link">READMORE</a>
+            </li>
+            <li class="blog__item">
+              <img src="#" alt="Blog Post 5" class="blog__image" />
+              <span class="blog__tag">NFT</span>
+              <div class="blog__meta">
+                <p class="blog__author">Tony Nguyen</p>
+                <time datetime="2022-06-20" class="blog__date">20 Jun 2022</time>
+              </div>
+              <h3 class="blog__post-title">Sonic live</h3>
+              <p class="blog__excerpt">
+                One September 22, 2021 A volutpat nulla eros, nulla ultrices nec
+                nulla imperdiet...
+              </p>
+              <a href="#" target="_blank" class="blog__link">READMORE</a>
+            </li>
+            <li class="blog__item">
+              <img src="#" alt="Blog Post 6" class="blog__image" />
+              <span class="blog__tag">NFT</span>
+              <div class="blog__meta">
+                <p class="blog__author">Tony Nguyen</p>
+                <time datetime="2022-06-20" class="blog__date">20 Jun 2022</time>
+              </div>
+              <h3 class="blog__post-title">Sonic live</h3>
+              <p class="blog__excerpt">
+                One September 22, 2021 A volutpat nulla eros, nulla ultrices nec
+                nulla imperdiet...
+              </p>
+              <a href="#" target="_blank" class="blog__link">READMORE</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- About Us Section -->
+      <section class="about-us">
+        <h2 class="about-us__title">About Us</h2>
+        <p class="about-us__description">
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+          dolore...
+        </p>
+        <div class="about-us__list-wrapper">
+          <ol class="about-us__list">
+            <li class="about-us__list-item">
+              <span class="about-us__number">01</span>
+              <h3 class="about-us__list-item-title">High Quality</h3>
+              <p class="about-us__list-item-description">
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry.
+              </p>
+            </li>
+            <li class="about-us__list-item">
+              <span class="about-us__number">02</span>
+              <h3 class="about-us__list-item-title">Big Collection</h3>
+              <p class="about-us__list-item-description">
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry.
+              </p>
+            </li>
+            <li class="about-us__list-item">
+              <span class="about-us__number">03</span>
+              <h3 class="about-us__list-item-title">Top Resource</h3>
+              <p class="about-us__list-item-description">
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry.
+              </p>
+            </li>
+            <li class="about-us__list-item">
+              <span class="about-us__number">04</span>
+              <h3 class="about-us__list-item-title">Big Community</h3>
+              <p class="about-us__list-item-description">
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry.
+              </p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- Team Section -->
+      <section class="team">
+        <h2 class="team__title">Our Team</h2>
+        <article class="team-card">
+          <img src="image.png" alt="Jason Smith" class="team-card__image" />
+          <h3 class="team-card__name">Jason Smith</h3>
+          <p class="team-card__role">Co - Founder</p>
+          <div class="team-card__socials">
+            <a class="team-card__social-link" href="#"><img src="twitter-icon.png" alt="Twitter"
+                class="team-card__social-icon" /></a>
+            <a class="team-card__social-link" href="#"><img src="facebook-icon.png" alt="Facebook"
+                class="team-card__social-icon" /></a>
+            <a class="team-card__social-link" href="#"><img src="telegram-icon.png" alt="Telegram"
+                class="team-card__social-icon" /></a>
+            <a class="team-card__social-link" href="#"><img src="linkedin-icon.png" alt="LinkedIn"
+                class="team-card__social-icon" /></a>
+            <a class="team-card__social-link" href="#"><img src="instagram-icon.png" alt="Instagram"
+                class="team-card__social-icon" /></a>
+          </div>
+        </article>
+        <article class="team-card">
+          <img src="image.png" alt="Jason Smith" class="team-card__image" />
+          <h3 class="team-card__name">Jason Smith</h3>
+          <p class="team-card__role">Co - Founder</p>
+          <div class="team-card__socials">
+            <a class="team-card__social-link" href="#"><img src="#" alt="Twitter" class="team-card__social-icon" /></a>
+            <a class="team-card__social-link" href="#"><img src="#" alt="Facebook" class="team-card__social-icon" /></a>
+            <a class="team-card__social-link" href="#"><img src="#" alt="Telegram" class="team-card__social-icon" /></a>
+            <a class="team-card__social-link" href="#"><img src="#" alt="LinkedIn" class="team-card__social-icon" /></a>
+            <a class="team-card__social-link" href="#"><img src="#" alt="Instagram"
+                class="team-card__social-icon" /></a>
+          </div>
+        </article>
+        <article class="team-card">
+          <img src="image.png" alt="Jason Smith" class="team-card__image" />
+          <h3 class="team-card__name">Jason Smith</h3>
+          <p class="team-card__role">Co - Founder</p>
+          <div class="team-card__socials">
+            <a class="team-card__social-link" href="#"><img src="#" alt="Twitter" class="team-card__social-icon" /></a>
+            <a class="team-card__social-link" href="#"><img src="#" alt="Facebook" class="team-card__social-icon" /></a>
+            <a class="team-card__social-link" href="#"><img src="#" alt="Telegram" class="team-card__social-icon" /></a>
+            <a class="team-card__social-link" href="#"><img src="#" alt="LinkedIn" class="team-card__social-icon" /></a>
+            <a class="team-card__social-link" href="#"><img src="#" alt="Instagram"
+                class="team-card__social-icon" /></a>
+          </div>
+        </article>
+        <article class="team-card">
+          <img src="image.png" alt="Jason Smith" class="team-card__image" />
+          <h3 class="team-card__name">Jason Smith</h3>
+          <p class="team-card__role">Co - Founder</p>
+          <div class="team-card__socials">
+            <a class="team-card__social-link" href="#"><img src="#" alt="Twitter" class="team-card__social-icon" /></a>
+            <a class="team-card__social-link" href="#"><img src="#" alt="Facebook" class="team-card__social-icon" /></a>
+            <a class="team-card__social-link" href="#"><img src="#" alt="Telegram" class="team-card__social-icon" /></a>
+            <a class="team-card__social-link" href="#"><img src="#" alt="LinkedIn" class="team-card__social-icon" /></a>
+            <a class="team-card__social-link" href="#"><img src="#" alt="Instagram"
+                class="team-card__social-icon" /></a>
+          </div>
+        </article>
+        <article class="team-card">
+          <img src="image.png" alt="Jason Smith" class="team-card__image" />
+          <h3 class="team-card__name">Jason Smith</h3>
+          <p class="team-card__role">Co - Founder</p>
+          <div class="team-card__socials">
+            <a class="team-card__social-link" href="#"><img src="#" alt="Twitter" class="team-card__social-icon" /></a>
+            <a class="team-card__social-link" href="#"><img src="#" alt="Facebook" class="team-card__social-icon" /></a>
+            <a class="team-card__social-link" href="#"><img src="#" alt="Telegram" class="team-card__social-icon" /></a>
+            <a class="team-card__social-link" href="#"><img src="#" alt="LinkedIn" class="team-card__social-icon" /></a>
+            <a class="team-card__social-link" href="#"><img src="#" alt="Instagram"
+                class="team-card__social-icon" /></a>
+          </div>
+        </article>
+        <article class="team-card">
+          <img src="image.png" alt="Jason Smith" class="team-card__image" />
+          <h3 class="team-card__name">Jason Smith</h3>
+          <p class="team-card__role">Co - Founder</p>
+          <div class="team-card__socials">
+            <a class="team-card__social-link" href="#"><img src="#" alt="Twitter" class="team-card__social-icon" /></a>
+            <a class="team-card__social-link" href="#"><img src="#" alt="Facebook" class="team-card__social-icon" /></a>
+            <a class="team-card__social-link" href="#"><img src="#" alt="Telegram" class="team-card__social-icon" /></a>
+            <a class="team-card__social-link" href="#"><img src="#" alt="LinkedIn" class="team-card__social-icon" /></a>
+            <a class="team-card__social-link" href="#"><img src="#" alt="Instagram"
+                class="team-card__social-icon" /></a>
+          </div>
+        </article>
+      </section>
+
+      <!-- FAQ Section -->
+      <section class="faq">
+        <h2 class="faq__title">FAQs</h2>
+        <div class="faq__list">
+          <details class="faq__item">
+            <summary class="faq__question">What are NFTs?</summary>
+            <p class="faq__answer">Urna vitae erat et lacus, consectetur ac nulla vestibulum lobortis...</p>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__question">How do I get NFTs?</summary>
+            <p class="faq__answer">You can buy NFTs on various marketplaces such as OpenSea...</p>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__question">How can we buy your NFTs?</summary>
+            <p class="faq__answer">Urna vitae erat et lacus, consectetur ac nulla vestibulum lobortis. Nulla dapibus
+              urna volutpat venenatis, risus faucibus.</p>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__question">Who are the team behind the project?</summary>
+            <p class="faq__answer">Urna vitae erat et lacus, consectetur ac nulla vestibulum lobortis. Nulla dapibus
+              urna volutpat venenatis, risus faucibus.</p>
+          </details>
+        </div>
+      </section>
+    </main>
+
+    #}
+  </body>
+
+</html>
