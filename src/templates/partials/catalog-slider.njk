@@ -1,27 +1,26 @@
-<!-- NFT Catalog Section -->
-      <section class="catalog">
-        <div class="catalog__header">
-          <h2 class="catalog__title">Catalog</h2>
-          <div class="catalog__controls">
-            <a href="#" class="catalog__view-all">SEE ALL</a>
-            <div class="catalog__navigation">
-              <button class="catalog__nav-btn catalog__nav-btn--prev button button--secondary">&#8592;</button>
-              <button class="catalog__nav-btn catalog__nav-btn--next button button--primary">&#8594</button>
-            </div>
-          </div>
-        </div>
-        <div class="catalog__grid">
+{# {% set data = require("./data.json") %} #}
 
-          <ul>
-            {% for item in items %}
-              <li>
-                {% include 'blocks/item-card.njk' %}
-              </li>
-            {% endfor %}
-          </ul>
+<section class="catalog">
+  <div class="catalog__header">
+    <h2 class="catalog__title">{{ catalog-slider.title }}</h2>
+    <div class="catalog__controls">
+      <a href="#" class="catalog__view-all button button--secondary">{{ catalog-slider.button }}</a>
+      <div class="catalog__navigation">
+        <button class="catalog__nav-btn catalog__nav-btn--prev button button--secondary">&#8592;</button>
+        <button class="catalog__nav-btn catalog__nav-btn--next button button--primary">&#8594</button>
+      </div>
+    </div>
+  </div>
+  <div class="catalog__grid">
+    <ul>
+      {% for item in items %}
+        <li>
+          {% include 'blocks/item-card.njk' %}
+        </li>
+      {% endfor %}
+    </ul>
 
-
-          {# <ul class="nft-list">
+    {# <ul class="nft-list">
             <li class="nft-card">
               <a href="#" class="nft-card__link">
                 <article class="nft-card__content">
@@ -73,5 +72,5 @@
               </a>
             </li>
           </ul> #}
-        </div>
-      </section>
+  </div>
+</section>

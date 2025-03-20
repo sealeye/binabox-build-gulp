@@ -1,0 +1,25 @@
+{
+  "title": "Binabox",
+  "path": "/",
+  "key": "value",
+  "nav": [
+    {
+      "url": "/",
+      "text": "Home"
+    },
+    {
+      "url": "/blog/",
+      "text": "Blog"
+    },
+    {
+      "url": "/catalog/",
+      "text": "Catalog"
+    }
+  ],
+  "catalog-slider": [
+    {
+      "title": "Catalog",
+      "button": "See all"
+    }
+  ]
+}

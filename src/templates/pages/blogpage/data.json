@@ -1,0 +1,18 @@
+{
+  "title": "Blog",
+  "path" : "/blog/",
+  "nav"  : [
+      {
+          "url": "/",
+          "text": "Home"
+      },
+      {
+          "url": "/blog/",
+          "text": "Blog"
+      },
+      {
+          "url": "/catalog/",
+          "text": "Catalog"
+      }
+  ]
+}

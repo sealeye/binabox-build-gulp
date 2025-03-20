@@ -32,8 +32,8 @@ const paths = {
   viewsDir: dev + 'templates/',
   distDir: dist,
   dev: {
-    scss:  dev+'styles/**/*.scss',
-    styles: dev+'styles/pages/*.scss',
+    scss:  dev+'styles/**/*.{css,scss}',
+    styles: dev+'styles/pages/*.{css,scss}',
     svg: dev+'images/sprite/*.svg',
     views: dev+'templates/**/*.njk',
     pages: dev+'templates/pages/*/*.{njk,html}',
@@ -82,7 +82,7 @@ const isDev = env.NODE_ENV === 'development'
 export const clean = () => deleteAsync([paths.distDir])
 
 const getDataForFile = (file) => {
-  const filePath = join(cwd(), paths.viewsDir, 'pages', dirname(file.relative), 'data.js');
+  const filePath = join(cwd(), paths.viewsDir, 'pages', dirname(file.relative), 'data.json');
   let fileContent
 
   try {

@@ -6,6 +6,21 @@ body {
   background: #0D0D15;
 }
 
+/* Link styles */
+a {
+  color: rgb(120, 187, 250);
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgb(56, 146, 243);
+}
+
+a:focus {
+  outline: 4px solid rgb(56, 146, 243);
+  outline-width: 5px;
+}
+
 /* Bakbak One for headings */
 .bakbak-one-regular {
   font-weight: 400;
@@ -52,8 +67,13 @@ body {
   font-weight: 600;
   font-size: 16px;
   line-height: 1.5;
+  color: white;
   color: #F5F8FB;
   text-decoration: none;
+}
+
+.main-nav__link--active {
+  color: rgb(56, 146, 243);
 }
 
 .main-nav__list-item {
@@ -728,17 +748,3 @@ body {
   margin-right: 10px;
 }
 
-/* Link styles */
-a {
-  color: rgb(120, 187, 250);
-  text-decoration: none;
-}
-
-a:hover {
-  color: rgb(56, 146, 243);
-}
-
-a:focus {
-  outline: 4px solid rgb(56, 146, 243);
-  outline-width: 5px;
-}
