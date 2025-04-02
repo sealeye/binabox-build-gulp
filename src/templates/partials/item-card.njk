@@ -1,8 +1,8 @@
 <a href="#" class="nft-card__link">
-                <article class="nft-card__content">
-                  <img class="nft-card__image" src="#" alt="NFT Item 1">
-                  <span class="nft-card__badge nft-card__badge--new">NEW</span>
-                  <p class="nft-card__price">$199</p>
-                  <h3 class="nft-card__title">NAME PRODUCT</h3>
-                </article>
-              </a>
+  <article class="nft-card__content">
+    <img class="nft-card__image" src="{{ item.image }}" alt="NFT Item 1">
+    <span class="nft-card__badge nft-card__badge--{{ item.state }}">{{ item.label }}</span>
+    <p class="nft-card__price">{{ item.price }}</p>
+    <h3 class="nft-card__title">{{ item.name }}</h3>
+  </article>
+</a>

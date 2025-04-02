@@ -1,0 +1,26 @@
+body {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #F5F8FB;
+  font-family: "Bakbak One", Arial, sans-serif;
+  background: #0D0D15;
+}
+
+/* Link styles */
+a {
+  color: rgb(120, 187, 250);
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgb(56, 146, 243);
+}
+
+a:focus {
+  outline: 4px solid rgb(56, 146, 243);
+  outline-width: 5px;
+}
+
+ul {
+  list-style: none;
+}

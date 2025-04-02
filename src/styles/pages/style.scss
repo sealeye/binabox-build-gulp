@@ -1,88 +1,9 @@
-body {
-  font-size: 16px;
-  line-height: 1.5;
-  color: #F5F8FB;
-  font-family: "Bakbak One", Arial, sans-serif;
-  background: #0D0D15;
-}
+@use "../global/variables.scss";
+@use "../global/global.scss";
 
-/* Link styles */
-a {
-  color: rgb(120, 187, 250);
-  text-decoration: none;
-}
-
-a:hover {
-  color: rgb(56, 146, 243);
-}
-
-a:focus {
-  outline: 4px solid rgb(56, 146, 243);
-  outline-width: 5px;
-}
-
-/* Bakbak One for headings */
-.bakbak-one-regular {
-  font-weight: 400;
-  font-style: normal;
-}
-
-/* Poppins for body text */
-.poppins-medium {
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  font-style: normal;
-}
-
+// @use "../components/button.scss";
 /* Header */
-.header {
-  padding: 32px;
-  /* Removed width: 100% as block elements automatically take full width */
-  /* background: #0D0D15; WILL INHERIT IT FROM BODY*/
-}
 
-.logo {
-  width: 188px;
-  height: 42px;
-}
-
-.logo img {
-  padding: 35px;
-  top: 1px;
-}
-
-.main-nav {
-  vertical-align: top;
-  width: auto;
-}
-
-.main-nav__list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.main-nav__link {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 1.5;
-  color: white;
-  color: #F5F8FB;
-  text-decoration: none;
-}
-
-.main-nav__link--active {
-  color: rgb(56, 146, 243);
-}
-
-.main-nav__list-item {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 1.5;
-  color: #F5F8FB;
-}
 
 /* Hero Banner */
 .banner {
@@ -127,29 +48,6 @@ a:focus {
   font-size: 24px;
 }
 
-/* Button Styles */
-.button {
-  display: inline-block;
-  font-family: 'Poppins';
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 1.5;
-  text-decoration: none;
-  padding: 8px 20px;
-  color: white;
-}
-
-.button--primary {
-  background: #0265DC;
-}
-
-.button--secondary {
-  background: rgba(208, 215, 251, 0);
-  border: 2px solid rgba(208, 215, 251, 0.17);
-  margin: 0 10px;
-  padding: 10px 20px;
-}
-
 /* NFT Catalog */
 .catalog {
   padding: 50px 0;
@@ -186,25 +84,18 @@ a:focus {
   margin-left: 20px;
 }
 
-/* .catalog__nav-btn {
-  background: none;
-  border: none;
-  color: #0265DC;
-  font-size: 24px;
-  cursor: pointer;
-} */
-
 .catalog__grid {
   display: block;
   margin: 0 auto;
 }
 
-.nft-card {
+.nft-card__link {
   display: inline-block;
   background: #1A1A2E;
   padding: 20px;
   border-radius: 10px;
-  width: calc(33.333% - 20px);
+  // width: calc(33.333% - 20px);
+  max-width: 300px;
   margin: 10px;
   box-sizing: border-box;
 }
@@ -222,6 +113,10 @@ a:focus {
   color: #F5F8FB;
   border-radius: 5px;
   margin-bottom: 10px;
+}
+
+.nft-card__badge--sold-out {
+  background-color: red;
 }
 
 .nft-card__price {
@@ -258,7 +153,7 @@ a:focus {
   margin: 0;
 }
 
-.blog__item {
+.blog-item {
   display: inline-block;
   background: #1A1A2E;
   padding: 20px;
@@ -268,13 +163,13 @@ a:focus {
   box-sizing: border-box;
 }
 
-.blog__image {
+.blog-item__image {
   width: 100%;
   border-radius: 10px;
   margin-bottom: 10px;
 }
 
-.blog__tag {
+.blog-item__tag {
   display: inline-block;
   padding: 5px 10px;
   background: #0265DC;
@@ -283,33 +178,33 @@ a:focus {
   margin-bottom: 10px;
 }
 
-.blog__meta {
+.blog-item__meta {
   display: block;
   margin-bottom: 10px;
 }
 
-.blog__author {
+.blog-item__author {
   font-family: 'Poppins', sans-serif;
   font-size: 14px;
 }
 
-.blog__date {
+.blog-item__date {
   font-family: 'Poppins', sans-serif;
   font-size: 14px;
 }
 
-.blog__post-title {
+.blog-item__post-title {
   font-size: 24px;
   margin-bottom: 10px;
 }
 
-.blog__excerpt {
+.blog-item__excerpt {
   font-family: 'Poppins', sans-serif;
   font-size: 16px;
   margin-bottom: 10px;
 }
 
-.blog__link {
+.blog-item__link {
   text-decoration: none;
   color: #0265DC;
 }

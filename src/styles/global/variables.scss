@@ -1,0 +1,20 @@
+$font-base: "Bakbak One", Arial, sans-serif;
+$font-accent: "Poppins", Arial, sans-serif;
+
+$color-blue: #00aaff;
+$color-orange: #ff6600;
+$color-gray: #333;
+$color-light-gray: #f9f9f9; // header height
+
+$dark-blue: #0D0D15;
+$main-background: $dark-blue;
+
+$color-primary: $color-orange;
+$color-secondary: $color-blue;
+$color-text: $color-gray;
+$color-background: $color-light-gray;
+
+$breakpoint-mobile: 480px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;
+$breakpoint-wide: 1440px;

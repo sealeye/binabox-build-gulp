@@ -1,0 +1,15 @@
+<img src="{{ item.img }}" height="664" width="736" alt="Blog Post 1"
+                class="blog-item__image"/>
+<span class="blog-item__tag">
+  {{ item.label }}</span>
+<div class="blog-item__meta">
+  <p class="blog-item__author">
+    {{ item.author }}</p>
+  <time datetime=" {{ item.data }}" class="blog-item__date">20 Jun 2022</time>
+</div>
+<h3 class="blog-item__post-title">{{ item.title }}</h3>
+<p class="blog-item__excerpt">
+  {{ item.text}}
+</p>
+<a href="{{ item.link }}" target="_blank" class="blog-item__link">{{
+               item.link-text }}</a>

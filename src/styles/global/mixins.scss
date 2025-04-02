@@ -1,0 +1,22 @@
+@mixin button($bg-color) {
+  background: $bg-color;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.btn-primary {
+  @include button(blue);
+}
+
+.btn {
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.btn-primary {
+  @include button(blue);
+}
+
+.btn-secondary {
+  @include button(gray);
+}

@@ -1,0 +1,27 @@
+.main-nav {
+  vertical-align: top;
+  width: auto;
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__list-item {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #F5F8FB;
+  }
+
+  &__link {
+    color: #F5F8FB;
+    text-decoration: none;
+  }
+
+  &__link--active {
+    color: rgb(56, 146, 243);
+  }
+}

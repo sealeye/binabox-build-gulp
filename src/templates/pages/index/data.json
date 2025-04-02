@@ -1,10 +1,10 @@
 {
-  "title": "Binabox",
-  "path": "/",
+  "title": "Binabox homepage",
+  "path": "index.html",
   "key": "value",
   "nav": [
     {
-      "url": "/",
+      "url": "index.html",
       "text": "Home"
     },
     {
@@ -16,10 +16,76 @@
       "text": "Catalog"
     }
   ],
-  "catalog-slider": [
+  "catalog_slider": {
+    "title": "Catalog",
+    "button": "See all text"
+  },
+  "cards": [
     {
-      "title": "Catalog",
-      "button": "See all"
+      "label": "",
+      "state": "new",
+      "price": "199",
+      "name" : "Name product",
+      "image" : "img/catalog-item-photo-1-2x.webp"
+    },
+    {
+      "label": "Sold out",
+      "state": "new",
+      "price": "2999",
+      "name" : "Name Product",
+      "image" : "img/catalog-item-photo-1-2x.webp"
+    },
+    {
+      "label": "Sold out",
+      "state": "sold-out",
+      "price": "2999",
+      "name" : "Name Product",
+      "image" : "img/catalog-item-photo-1-2x.webp"
+    },
+    {
+      "label": "Sold out",
+      "state": "sold-out",
+      "price": "2999",
+      "name" : "Name Product",
+      "image" : "img/catalog-item-photo-1-2x.webp"
     }
+  ],
+  "blog": {
+      "title": "Our blog"
+  },
+  "blog_items": [
+    {
+        "img": "img/catalog-item-photo-1-2x.webp",
+        "label": "NFT card",
+        "author": "Tony Nguyen",
+        "data": "2022-06-20",
+        "blog-item-date": "20 Jun 2022",
+        "title": "Sonic live",
+        "text": "One September 22, 2021 A volutpat nulla eros, nulla ultrices necnulla imperdiet...",
+        "link-text": "Read more",
+        "link": "index.html"
+    },
+    {
+      "img": "img/catalog-item-photo-1-2x.webp",
+      "label": "NFT card",
+      "author": "Tony Nguyen",
+      "data": "2022-06-20",
+      "blog-item-date": "20 Jun 2022",
+      "title": "Sonic live",
+      "text": "One September 22, 2021 A volutpat nulla eros, nulla ultrices necnulla imperdiet...",
+      "link-text": "Read more",
+      "link": "index.html"
+  },
+  {
+    "img": "img/catalog-item-photo-1-2x.webp",
+    "label": " card",
+    "author": "Tony Nguyen",
+    "data": "2022-06-20",
+    "blog-item-date": " Jun 2022",
+    "title": "Sonic live fhkdshksdhjkd",
+    "text": "One September 22, 2021 A volutpat nulla eros, nulla ultrices necnulla imperdiet...",
+    "link-text": "Read more",
+    "link": "index.html"
+}
   ]
 }
